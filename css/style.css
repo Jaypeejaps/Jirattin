@@ -1,0 +1,1140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.hide {
+    display: none;
+}
+
+:root {
+    --main-color: lightblue;
+    --color-dark: #ffcccb;
+    --text-grey: #8390A2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: var(--white);
+    font-family: 'Poppins', sans-serif;
+}
+
+.mx-auto {
+    border-radius: 20px;
+    margin-top: 200px !important;
+    width: 24% !important;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 25px;
+}
+
+.mx-autoss {
+    border-radius: 20px;
+    margin-top: 130px !important;
+    width: 40% !important;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 25px;
+    margin-left: 30%;
+    text-align: center;
+}
+
+.btnUpdateEmp {
+    height: 45px;
+}
+
+.mx-autoss .form-control {
+    text-align: center;
+}
+
+.btn-primary {
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgb(241, 138, 138) 35%, rgb(162, 190, 250) 100%);
+    font-size: 22px;
+}
+
+.form-control {
+    color: rgba(0, 0, 0, .87);
+    border-bottom-color: rgba(0, 0, 0, .42);
+    box-shadow: none !important;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 4px 4px 0 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 2.5rem !important;
+    font-weight: 900;
+}
+
+.form-label {
+    font-weight: 800 !important;
+    font-size: 22px;
+    text-align: center;
+}
+
+.mb-2 {
+    margin-left: 12px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .mx-auto {
+        width: 90% !important;
+    }
+
+    .mx-autoss {
+        width: 80% !important;
+        margin-left: 10%;
+    }
+
+    .btn-primary {
+        font-size: 18px;
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 2rem !important;
+    }
+
+    .form-label {
+        font-size: 18px;
+    }
+
+    .mb-2 {
+        margin-left: 8px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.1rem;
+    padding-top: 0.4rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    left: 1px;
+    width: calc(100% - 1px);
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+header h2 {
+    color: #222;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+header label span {
+    font-size: 1.7rem;
+    padding-left: 1rem;
+}
+
+.sidebar {
+    width: 230px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--main-color);
+    transition: width 200ms;
+}
+
+.sidebar-brand {
+    height: 90px;
+    padding: 1rem 0rem 1rem 2rem;
+    color: #fff;
+    margin-top: 13px;
+    margin-left: 15px;
+}
+
+.sidebar-brand span {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: var(--text-grey);
+}
+
+.sidebar-menu {
+    margin-top: 1rem;
+}
+
+.sidebar-menu li {
+    width: 100%;
+    margin-bottom: 1.7rem;
+    padding-left: 0rem;
+}
+
+.sidebar-menu li span {
+    font-weight: bold;
+}
+
+.sidebar-menu a {
+    padding-left: 0.8rem;
+    display: block;
+    color: var(--text-grey);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.sidebar-menu a.active {
+    background: #fff;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--text-grey);
+    border-radius: 30px 0px 0px 30px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.sidebar-menu a span:first-child {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+#nav-toggle:checked+.sidebar {
+    width: 4%;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand,
+#nav-toggle:checked+.sidebar li {
+    padding-left: 0.1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+    padding-left: 0rem;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child {
+    display: none;
+}
+
+#nav-toggle:checked~.main-content {
+    margin-left: 66px;
+}
+
+#nav-toggle:checked~.main-contentticket {
+    margin-left: 64px;
+}
+
+.main-content {
+    transition: margin-left 300ms;
+    margin-left: 220px;
+}
+
+.main-contentticket {
+    transition: margin-left 300ms;
+    margin-left: 220px;
+}
+
+.mynav {
+    margin-top: 28rem;
+    /* Default 23rem */
+}
+
+.mynav li a {
+    padding-left: 0.1rem;
+    display: block;
+    color: var(--text-grey);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 80%;
+}
+
+.mynav li a:hover {
+    background-color: white;
+
+}
+
+
+
+.user-wrapper {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.user-wrapper h5 {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--text-grey);
+    padding-right: 1rem;
+}
+
+.user-wrapper .bi.bi-person {
+    margin-right: 1rem;
+    font-size: 30px;
+}
+
+.user-wrapper small {
+    display: inline-block;
+    color: var(--text-grey);
+    margin-top: -10px;
+    margin-right: 1.5rem;
+}
+
+main {
+    margin-top: 1px;
+    padding: 2rem;
+    background: #f1f5f9;
+    min-height: calc(100vh - 5px);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.cards span {
+    font-size: 14px;
+}
+
+.card-single {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 0.9rem;
+    border-radius: 2px;
+    font-size: 2rem;
+}
+
+.card-single span {
+    font-weight: bold;
+}
+
+.card-single div:last-child span {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.card-single:first-child span {
+    color: var(--text-grey);
+    margin-bottom: 3rem;
+}
+
+.card-single:last-child {
+    background: var(--main-color);
+}
+
+.card-single:last-child h1,
+.card-single:last-child div:last-child span,
+.card-single:last-child div:first-child span {
+    color: black;
+}
+
+.recent-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 100% auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 5px;
+    overflow-y: scroll;
+    position: fixed;
+}
+
+.card-body,
+.card-header {
+    padding: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header button {
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8rem;
+    padding: .5rem 1rem;
+    border: 1px solid var(--main-color);
+}
+
+#ticketingsdone {
+    margin-top: 1%;
+}
+
+thead tr {
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+td {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+    color: #222;
+}
+
+tr td:last-child {
+    display: flex;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+
+.table-wrap {
+    max-height: 100%;
+    overflow-y: scroll;
+}
+
+img {
+    margin-top: -40px;
+    height: 50px;
+    margin-left: -1px;
+    position: fixed;
+    display: block;
+}
+
+img.j {
+    height: 70px;
+    margin-left: -23px;
+    margin-top: -53px;
+    margin-bottom: 200px;
+}
+
+/* buttonstatuss tripple S*/
+.buttonsss .btnstatus .icons {
+    position: absolute;
+    top: -15px;
+    right: -13px;
+    border-radius: 100%;
+    background: #FFF;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(241, 138, 138) 35%, rgb(162, 190, 250) 100%);
+    font-size: 18px;
+    color: white;
+    height: 35px;
+    width: 40px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border: 1px solid black;
+}
+
+
+.icons span {
+    margin-top: 200px;
+}
+
+.btnstatus {
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.buttonsss .btnstatus:hover {
+    background: linear-gradient(90deg, rgb(241, 138, 138) 35%, rgb(162, 190, 250) 100%);
+}
+
+.buttonsss ul li .btnstatus {
+    left: 0;
+    top: 0;
+}
+
+.buttonsss ul {
+    text-align: center;
+}
+
+.buttonsss ul {
+    overflow: hidden;
+}
+
+.buttonsss ul li {
+    float: left;
+    top: 0;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 37px;
+    padding-top: 5px;
+    width: 8%;
+}
+
+.statusIDs .buttonsss ul {
+    padding: 20px;
+}
+
+.buttonsss ul li {
+    left: -38px;
+}
+
+.span {
+    color: white;
+}
+
+button.btnCreate.btn-primary {
+    position: static;
+}
+
+/* buttonstatuss double S*/
+.buttonsss .btnstatuss .icons {
+    position: absolute;
+    top: -15px;
+    right: -13px;
+    border-radius: 100%;
+    background: #FFF;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(241, 138, 138) 35%, rgb(162, 190, 250) 100%);
+    font-size: 18px;
+    color: white;
+    height: 35px;
+    width: 40px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    border: 1px solid black;
+}
+
+.btnstatuss {
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.buttonsss .btnstatuss:hover {
+    background: linear-gradient(90deg, rgb(241, 138, 138) 35%, rgb(162, 190, 250) 100%);
+}
+
+/* Extra Small (Phone) */
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 0.5rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-single {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .recent-grid {
+        grid-template-columns: 100%;
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    #nav-toggle:checked+.sidebar {
+        display: block;
+        width: 90px;
+    }
+
+    #nav-toggle:checked~.main-content,
+    #nav-toggle:checked~.main-contentticket {
+        margin-left: 90px;
+    }
+
+    #sidebar.sidebar-band.img {
+        display: none;
+    }
+
+    #nav-toggle:checked+.nav-toggle-label {
+        display: none;
+    }
+
+    #nav-toggle:not(:checked)+.nav-toggle-label {
+        display: block;
+    }
+
+    .bi.bi-list {
+        display: block;
+    }
+
+    .main-content,
+    .main-contentticket {
+        margin-left: 0;
+    }
+}
+
+/* Landscape view */
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 0.5rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-single {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .recent-grid {
+        grid-template-columns: 100%;
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    #nav-toggle:checked+.sidebar {
+        display: block;
+        width: 90px;
+    }
+
+    #nav-toggle:checked~.main-content,
+    #nav-toggle:checked~.main-contentticket {
+        margin-left: 90px;
+    }
+
+    #nav-toggle:checked+.nav-toggle-label {
+        display: none;
+    }
+
+    #nav-toggle:not(:checked)+.nav-toggle-label {
+        display: block;
+    }
+
+    .bi.bi-list {
+        display: block;
+    }
+
+    .main-content,
+    .main-contentticket {
+        margin-left: 0;
+    }
+}
+
+/*  */
+
+#ticketList td {
+    font-weight: bold;
+}
+
+#ticketList tbody button {
+    margin-top: 35px;
+    align-items: center;
+}
+
+#completeTicket td {
+    font-weight: bold;
+}
+
+.employee-list {
+    margin-top: 2rem;
+}
+
+.statusIDs {
+    padding-top: 0rem;
+}
+
+.statusIDs button {
+    border-radius: 20px;
+}
+
+.statusIDs a {
+    text-decoration: none;
+    color: black;
+}
+
+.btnstatus {
+    width: 11%;
+    font-size: 16px;
+    background: var(--main-color);
+    height: 39px;
+}
+
+.btnstatuss {
+    width: 10%;
+    font-size: 16px;
+    background: var(--main-color);
+    height: 39px;
+
+}
+
+.statusIDs .AddTicket {
+    float: right;
+    margin-right: 2rem;
+}
+
+.btnstatus span {
+    font-weight: bold;
+}
+
+.btnstatuss span {
+    font-weight: bold;
+}
+
+.element.style {
+    position: static;
+}
+
+.btnCreate {
+    top: 20px;
+    left: -4px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    width: 130%;
+    height: 40px;
+    color: black;
+    border: 1px solid black;
+}
+
+.btnCreate:hover {
+    background: lightblue;
+}
+
+.ul {
+    padding: 0px;
+}
+
+.btnAdd {
+    font-size: 18px;
+    width: 18%;
+    height: 40px;
+}
+
+.btnClose {
+    font-size: 18px;
+    width: 18%;
+    height: 38px;
+    border-radius: 20px;
+}
+
+.modal-header h5 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.modal-body label {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.modal-body input select option {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.ticket-list {
+    float: left;
+    margin-top: 20px;
+}
+
+.btn-warning {
+    font-size: 19px;
+    border-radius: 0.3rem;
+    margin-right: 3px;
+}
+
+.btn-danger {
+    font-size: 19px;
+    border-radius: 0.3rem;
+}
+
+.btn-info {
+    margin-right: 3px;
+}
+
+#btnUpdateEmp {
+    height: 44px;
+}
+
+#btnCreateuser {
+    height: 44px;
+}
+
+.btnView {
+    font-size: 19px;
+    width: 35px;
+    border-radius: 0.3rem;
+    margin-right: 3px;
+    background-color: lightblue;
+    border: none;
+}
+
+#ticketDetails {
+    font-size: 20px;
+    width: 100%;
+}
+
+#viewTicketModal {
+    margin-top: 60px;
+}
+
+.active {
+    background-color: white;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    border: 1px solid lightblue;
+    width: 50px;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.pagination a.active {
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+}
+
+#pagination a:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+/* Done */
+
+.paginationdone a {
+    display: inline-block;
+    border: 1px solid lightblue;
+    width: 50px;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.paginationdone a.active {
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+}
+
+#paginationdone a:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+.filteremp {
+    display: flex;
+}
+
+.filteremp .btnemp {
+    font-size: 16px;
+    height: 35px;
+    gap: 0.5%;
+    width: 4.2%;
+    margin-left: 0.5%;
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 10px;
+    border: 1px solid rgb(20, 19, 19);
+    font-weight: bold;
+}
+
+
+.filteremp .form-control {
+    margin-bottom: 1%;
+    width: 30%;
+}
+
+.filteremp .btnsearchemp {
+    width: 5%;
+    font-size: 20px;
+    background: var(--main-color);
+    height: 39px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-left: 1%;
+}
+
+.filtermytickets {
+    display: flex;
+}
+
+.filtermytickets .btnemp {
+    font-size: 19px;
+    height: 35px;
+    gap: 0.5%;
+    width: 4%;
+    margin-left: 0.5%;
+    align-items: center;
+    background: var(--main-color);
+    border-radius: 10px;
+    border: 1px solid rgb(20, 19, 19);
+    font-weight: bold;
+}
+
+
+.filtermytickets .form-control {
+    margin-bottom: 1%;
+    width: 30%;
+}
+
+.filtermytickets .btnsearchemp {
+    width: 5%;
+    font-size: 20px;
+    background: var(--main-color);
+    height: 39px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-left: 1%;
+}
+
+.filterdones button {
+    width: 12%;
+    font-size: 16px;
+    background: var(--main-color);
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+.paginations a {
+    display: inline-block;
+    border: 1px solid lightblue;
+    width: 50px;
+    padding: 5px;
+    margin: 2px;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.paginations a.active {
+    background-color: lightblue;
+    color: white;
+    font-weight: bold;
+}
+
+#paginations a:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+.btnpage {
+    width: 10%;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btnpage:hover {
+    background: lightblue;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.btn-clear-search {
+    position: absolute;
+    margin-top: 4px;
+    right: 6.8%;
+    border: none;
+    width: 2%;
+    font-size: 22px;
+    background-color: transparent;
+    cursor: pointer;
+    margin: auto;
+    overflow: auto;
+}
+
+.btn-clear-searchdone {
+    position: absolute;
+    margin-top: 3.5px;
+    left: 38%;
+    border: none;
+    width: 2%;
+    font-size: 22px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-clear-searchh {
+    position: absolute;
+    margin-top: 3.5px;
+    right: 6.8%;
+    border: none;
+    width: 2%;
+    font-size: 22px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnsearch {
+    width: 5%;
+    font-size: 20px;
+    background: var(--main-color);
+    height: 39px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.btnsearchh {
+    width: 5%;
+    font-size: 20px;
+    background: var(--main-color);
+    height: 39px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.btnsearchdone {
+    width: 5%;
+    font-size: 20px;
+    background: var(--main-color);
+    height: 39px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.filteremp .filterdones {
+    display: flex;
+    font-size: 16px;
+    height: 32px;
+    gap: 1%;
+    margin-left: 2%;
+    width: 80%;
+    text-align: center;
+}
+
+.filteremp .filterdones button {
+    width: 5%;
+}
+
+/* Mobile View */
+@media screen and (max-width: 580px) {
+
+    th {
+        top: 0px;
+    }
+
+    .table-wrap {
+        max-height: 100%;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+    }
+
+    #ticketList td,
+    #completeTicket td,
+    .btnstatus,
+    .btnCreate,
+    .btnAdd,
+    .btnClose,
+    .btn-warning,
+    .btn-danger,
+    .btn-info,
+    .btnView,
+    .btnsearch,
+    .btnsearchh,
+    .btn-clear-searchh,
+    .btn-clear-search,
+    .btn-clear-searchdone,
+    .btnsearchemp,
+    .filteremp,
+    .filterdones {
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        border-radius: 5px;
+    }
+
+    .statusIDs button {
+        width: 40%;
+        margin-top: 15px;
+        margin-left: 40px;
+    }
+
+    .ticket-list {
+        float: none;
+        margin-top: 10px;
+    }
+
+    #exampleModal,
+    #viewTicketModal {
+        margin-top: 30px;
+    }
+
+    .modal-header h5 {
+        font-size: 20px;
+    }
+
+    .modal-body label,
+    .modal-body input,
+    .modal-body select,
+    .modal-body option,
+    #ticketDetails {
+        font-size: 18px;
+    }
+
+    .statusIDs .AddTicket {
+        float: none;
+        margin-right: 0;
+    }
+
+    .paginaton .paginations .btnpage .search-bar {
+        margin: auto;
+        height: auto;
+        overflow: auto;
+    }
+
+}

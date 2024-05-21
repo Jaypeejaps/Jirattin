@@ -1,0 +1,224 @@
+.chartCard {
+    height: calc(90vh - 1px);
+    background: lightblue;
+    display: flex;
+    margin-left: 5px;
+    margin-top: -25px;
+}
+
+.chartBox {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px lightblue;
+    background: white;
+}
+
+.filterdates {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    gap: 10%;
+}
+
+.filterdates .filtersss {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.filterdatesbtn {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.filterdates button {
+    border-radius: 50px;
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.btnsearchtimeline {
+    border-radius: 50px;
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+.displayMonth h2 {
+    text-align: center;
+    font-weight: bolder;
+    margin-top: -15px;
+}
+
+button {
+    width: 9%;
+    border-radius: 40px;
+    background-color: lightblue;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btnSwitch {
+    position: absolute;
+    margin-top: 5px;
+}
+
+.filtersss {
+    font-weight: bold;
+}
+
+.btnsearchtimelineclear {
+    border-radius: 50px;
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+
+/* Extra Small (Phone) */
+@media only screen and (max-width: 600px) {
+    .chartCard {
+        height: auto;
+        margin-top: 0.2%;
+        flex-direction: column;
+    }
+
+    .chartBox {
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 10px;
+        border: solid 2px lightblue;
+    }
+
+    .filterdates button,
+    button {
+        width: 40%;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .displayMonth h2 {
+        margin-top: 0;
+    }
+
+    .btnSwitch {
+        position: static;
+        margin-top: 2px;
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    #nav-toggle:checked+.sidebar {
+        display: block;
+        width: 90px;
+    }
+
+    #nav-toggle:checked~.main-content {
+        margin-left: 90px;
+    }
+
+    #nav-toggle:checked~.main-contentticket {
+        margin-left: 90px;
+    }
+
+    #nav-toggle:checked+.nav-toggle-label {
+        display: none;
+    }
+
+    #nav-toggle:not(:checked)+.nav-toggle-label {
+        display: block;
+    }
+
+    .bi bi-list {
+        display: block;
+    }
+
+    .main-contentticket {
+        margin-left: 0;
+    }
+}
+
+/* Landscape view */
+@media only screen and (max-width: 768px) {
+    .chartCard {
+        height: auto;
+        margin-top: 0.2%;
+        flex-direction: column;
+    }
+
+    .chartBox {
+        width: 90%;
+        margin: 10px auto;
+        border-radius: 10px;
+        border: solid 2px lightblue;
+    }
+
+    .filterdates button,
+    button {
+        width: 40%;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .displayMonth h2 {
+        margin-top: 0;
+    }
+
+    .btnSwitch {
+        position: static;
+        margin-top: 2px;
+    }
+
+    .sidebar {
+        display: none;
+        width: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    #nav-toggle:checked+.sidebar {
+        display: block;
+        width: 90px;
+    }
+
+    #nav-toggle:checked~.main-content {
+        margin-left: 90px;
+    }
+
+    #nav-toggle:checked~.main-contentticket {
+        margin-left: 90px;
+    }
+
+    #nav-toggle:checked+.nav-toggle-label {
+        display: none;
+    }
+
+    #nav-toggle:not(:checked)+.nav-toggle-label {
+        display: block;
+    }
+
+    .bi bi-list {
+        display: block;
+    }
+
+    .main-contentticket {
+        margin-left: 0;
+    }
+}
+
+.filtersss {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#filtername {
+    width: 5%;
+}

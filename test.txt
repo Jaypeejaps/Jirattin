@@ -1,0 +1,12 @@
+Improvement/Future updates/Upgrades:
+
+3. Future update if man(Change graph from javascript to php).
+4. Pasok yung number 1.
+
+5. Kapag lagpas na sa oras yung deadline end, mag nonotify.
+
+2. OBT
+
+Next update(Future plans pero ready to use naman na ang system)
+
+- yung timeline inalis ko na muna kasi balak ko baguhin ng php ang gamit. At lalagyan ko ang calendar para mas maging maayos tignan.
